@@ -1,1 +1,9 @@
 target/
+
+# IntelliJ related ignores
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Generell ignores
+*.jar
+*.war
