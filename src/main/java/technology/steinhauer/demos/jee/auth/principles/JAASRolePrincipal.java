@@ -6,8 +6,8 @@ package technology.steinhauer.demos.jee.auth.principles;
  * @author hsteinhauer
  * @since 02.03.14
  */
-public class JAASPasswordPrincipal extends JAASBasePrincipal {
-    public JAASPasswordPrincipal(String name) {
+public class JAASRolePrincipal extends JAASBasePrincipal {
+    public JAASRolePrincipal(String name) {
         checkNameForNull(name);
         this.name = name;
     }
@@ -20,7 +20,7 @@ public class JAASPasswordPrincipal extends JAASBasePrincipal {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        JAASPasswordPrincipal other = (JAASPasswordPrincipal) obj;
+        JAASRolePrincipal other = (JAASRolePrincipal) obj;
         if (name == null) {
             if (other.name != null)
                 return false;

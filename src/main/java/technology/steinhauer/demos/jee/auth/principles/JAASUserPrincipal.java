@@ -9,9 +9,7 @@ package technology.steinhauer.demos.jee.auth.principles;
 public class JAASUserPrincipal extends JAASBasePrincipal {
 
     public JAASUserPrincipal(String name) {
-        if (name == null) {
-            throw new NullPointerException("Given name was null");
-        }
+        checkNameForNull(name);
 
         this.name = name;
     }

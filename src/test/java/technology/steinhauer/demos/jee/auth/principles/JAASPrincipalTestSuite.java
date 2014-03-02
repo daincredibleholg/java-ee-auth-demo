@@ -12,7 +12,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses ({
         JAASUserPrincipalTest.class,
-        JAASPasswordPrincipalTest.class
+        JAASPasswordPrincipalTest.class,
+        JAASRolePrincipalTest.class
 })
 public class JAASPrincipalTestSuite {
 

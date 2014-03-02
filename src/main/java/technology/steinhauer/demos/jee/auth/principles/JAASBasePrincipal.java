@@ -31,4 +31,11 @@ public abstract class JAASBasePrincipal implements Principal, Serializable {
         return "Principle [name = " + name +  "]";
     }
 
+    protected void checkNameForNull(String name) {
+        if (name == null) {
+            throw new NullPointerException("Given name was null");
+        }
+    }
+
+
 }
