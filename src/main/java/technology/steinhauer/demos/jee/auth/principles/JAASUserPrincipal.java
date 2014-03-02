@@ -1,16 +1,12 @@
 package technology.steinhauer.demos.jee.auth.principles;
 
-import java.io.Serializable;
-import java.security.Principal;
-
 /**
  * This class is used for JAAS authentication.
  *
  * @author hsteinhauer
  * @since 02.03.14
  */
-public class JAASUserPrincipal implements Principal, Serializable {
-    private String name;
+public class JAASUserPrincipal extends JAASBasePrincipal {
 
     public JAASUserPrincipal(String name) {
         if (name == null) {
@@ -18,24 +14,6 @@ public class JAASUserPrincipal implements Principal, Serializable {
         }
 
         this.name = name;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String toString() {
-        return "UserPrinciple [name = " + name +  "]";
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        return result;
     }
 
     @Override

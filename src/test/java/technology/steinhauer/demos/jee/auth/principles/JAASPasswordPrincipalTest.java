@@ -11,16 +11,16 @@ import static junit.framework.Assert.fail;
  * @author hsteinhauer
  * @since 02.03.14
  */
-public class JAASUserPrincipalTest extends JAASBasePrincipalTest {
+public class JAASPasswordPrincipalTest extends JAASBasePrincipalTest {
 
     @Before
     public void setUp() throws Exception {
-        principle = new JAASUserPrincipal("testus.test");
+        principle = new JAASPasswordPrincipal("testus.test");
     }
 
     @Test(expected = NullPointerException.class)
     public void checkErrorHandlingForEmptyName() throws Exception {
-        JAASUserPrincipal principle = new JAASUserPrincipal(null);
+        principle = new JAASPasswordPrincipal(null);
         fail("Instanciation with empty / null name should throw an exception.");
     }
 }
