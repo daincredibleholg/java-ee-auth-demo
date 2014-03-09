@@ -1,0 +1,9 @@
+<!--
+    This is just the interesting / needed part for this
+    example. Place it in your Apache Tomcat server.xml, located
+    in $CATALINA_HOME/conf directory.
+-->
+<Realm className="org.apache.catalina.realm.JAASRealm"
+       appName="demoAuth"
+       userClassNames="technology.steinhauer.demos.jee.auth.principles.JAASUserPrincipal,technology.steinhauer.demos.jee.auth.principles.JAASPasswordPrincipal"
+       roleClassNames="technology.steinhauer.demos.jee.auth.principles.JAASRolePrincipal"/>
